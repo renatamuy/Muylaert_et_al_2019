@@ -82,6 +82,7 @@ f_mpos <-  cases ~  scale(s_hosts) +
 
 mpos_NA1516 <- inla(formula = f_mpos,
              family = "zeroinflatedpoisson0",
+             control.family = list(list(Theta_neg_fixed)),
              data = d_pos_0016,
              verbose = TRUE,
              control.compute = list(config = TRUE, dic = TRUE, cpo = TRUE))
