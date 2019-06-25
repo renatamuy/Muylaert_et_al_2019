@@ -87,9 +87,14 @@ mpos_NA1516 <- inla(formula = f_mpos,
              verbose = TRUE,
              control.compute = list(config = TRUE, dic = TRUE, cpo = TRUE))
 
+# Improving model
+mpos_NA1516_improved <- inla.cpo(mpos_NA1516)
+
 # Save model
 save(mpos_NA1516, file = "mb_NA1516.rda")
+save(mpos_NA1516_improved, file = "mb_NA1516_improved.rda")
 
+# Coef plot
 coefINLA(mpos_NA1516, intercept = TRUE, "Greys") +
   labs(title = "Posterior distributions",
        subtitle = "with 95% credible intervals") +
