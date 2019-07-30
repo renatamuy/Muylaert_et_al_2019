@@ -1,2 +1,2 @@
-# Muylaert_et_al_2019
-Hantavirus disease in Brazil
+# Muylaert_et_al_2019 submitted to Viruses
+Hantavirus cardiopulmonary syndrome in Brazil
